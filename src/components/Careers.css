@@ -1,0 +1,170 @@
+
+/* ===== HEADER BANNER ===== */
+.about-page-header {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page-header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-page-header-overlay h2 {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.about-page-header-overlay p {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* ===== CAREERS SECTION ===== */
+.careers-section {
+  width: 100%;
+  padding: 55px 60px;
+  background: #ffffff;
+}
+
+/* ===== HEADER ===== */
+.careers-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.careers-tag {
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: #2f7a46;
+  font-weight: 600;
+}
+
+.careers-header h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #3b3a22;   /* dark olive brown */
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+/* ===== LAYOUT ===== */
+.careers-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 60px;
+  width: 100%;
+}
+
+/* ===== LEFT JOB OVERVIEW FIX ===== */
+.job-overview {
+  height: fit-content;
+  align-self: start;
+  position: sticky;
+  top: 40px;
+}
+
+/* ===== BOX ===== */
+.career-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+}
+
+/* ===== BOX HEADINGS ===== */
+.career-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f7a46;
+  margin-bottom: 22px;
+  padding-left: 14px;
+  border-left: 4px solid #2f7a46;
+}
+
+/* ===== TEXT ===== */
+.career-box p,
+.career-box li {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.9;
+}
+
+/* ===== LIST ===== */
+.career-box ul {
+  padding-left: 20px;
+}
+
+.career-box ul li {
+  margin-bottom: 10px;
+}
+
+/* ===== JOB OVERVIEW ITEMS ===== */
+.overview-item {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 16px 0;
+}
+
+.overview-item span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.overview-item p {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+/* ===== APPLY BUTTON ===== */
+.apply-btn {
+  margin-top: 28px;
+  background: #f2dd57;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 35px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #e5cf4d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .careers-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-section {
+    padding: 70px 25px;
+  }
+
+  .about-page-header-overlay h2 {
+    font-size: 46px;
+  }
+
+  .job-overview {
+    position: static;
+  }
+}

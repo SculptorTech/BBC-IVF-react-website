@@ -1,0 +1,411 @@
+.achievements-section {
+  padding: 80px 60px;
+  background-color: #ffffff;
+}
+
+.achievements-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LEFT SIDE */
+.achievements-left {
+  flex: 1;
+}
+
+.achievements-tag {
+  color: #4f8f3a;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.achievements-left h2 {
+  font-size: 36px;
+  color: #0b2e13;
+  margin-bottom: 15px;
+}
+
+.achievements-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  color: #333;
+}
+
+.achievements-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4f8f3a;
+  font-weight: bold;
+}
+
+.achievements-btn {
+  padding: 12px 26px;
+  background-color: #f2df5a;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.achievements-btn:hover {
+  background-color: #e6d24d;
+}
+
+/* RIGHT GRID */
+.achievements-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stat-box {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 40px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.stat-box p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.stat-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.green {
+  background-color: #5a8f4a;
+  color: #ffffff;
+}
+
+.yellow {
+  background-color: #f2df5a;
+  color: #1f3b1f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .achievements-container {
+    flex-direction: column;
+  }
+
+  .achievements-right {
+    width: 100%;
+  }
+}
+
+/* ================== FLIP SERVICE CARDS – HARD HOVER ================== */
+
+.flip-cards-container {
+  display: flex;
+  gap: 32px;
+  margin-top: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARD WRAPPER */
+.flip-card {
+  width: 100%;
+  height: 340px;
+  perspective: 1200px;
+}
+
+/* INNER */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.25s linear; /* HARD + FAST */
+}
+
+/* HARD FLIP */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(1.03);
+}
+
+/* FRONT & BACK COMMON */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #1f7a3f;
+}
+
+/* HARD SHADOW + GLOW */
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  box-shadow: 0 12px 35px rgba(31, 122, 63, 0.55);
+  border-color: #f2df5a;
+}
+
+/* FRONT */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* STRONG OVERLAY */
+.front-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  background: linear-gradient(
+    to top,
+    rgba(15, 80, 40, 0.95) 0%,
+    rgba(15, 80, 40, 0.7) 60%,
+    rgba(15, 80, 40, 0.0) 100%
+  );
+}
+
+.front-overlay h2 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* BACK */
+.flip-card-back {
+  background: #0f5028;
+  color: #ffffff;
+  padding: 32px 28px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HARD TEXT STYLE */
+.flip-card-back h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #f2df5a;
+}
+
+.flip-card-back p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+/* HARD HOVER ZOOM ON IMAGE */
+.flip-card:hover .flip-card-front img {
+  transform: scale(1.08);
+  transition: transform 1s linear;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .flip-cards-container {
+    flex-direction: column;
+  }
+
+  .flip-card {
+    height: 300px;
+  }
+
+  .front-overlay h2 {
+    font-size: 24px;
+  }
+}
+/* ===============================
+   CATTLE CARD SECTION
+================================ */
+/* ===============================
+   CATTLE CARD SECTION
+================================ */
+
+/* ===== CATTLE CARDS SECTION ===== */
+
+.cattle-section {
+  width: 100%;
+  padding: 40px 20px 10px;
+}
+
+.cattle-row {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cattle-card {
+  flex: 1;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f2f2f2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.cattle-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== VIEW MORE BUTTON ===== */
+
+.view-more-wrapper {
+  margin-top: 30px;
+}
+
+.view-more-btn {
+  background: #f2de5c;
+  color: #000;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-more-btn:hover {
+  background: #e6cf3a;
+}
+
+/* ================= PRODUCTS VIEW MORE ================= */
+
+.flip-products-section {
+  max-width: 1200px;
+  margin: 80px auto 0;
+}
+
+.products-view-wrapper {
+  display: flex;
+  justify-content: flex-end; /* push button right */
+  margin-top: 25px;
+}
+
+.products-view-btn {
+  background: #f2de5c;
+  color: #000;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.products-view-btn:hover {
+  background: #e6cf3a;
+}
+
+
+
+/* ===== VIEW MORE BUTTON AFTER FLIP CARDS ===== */
+
+.flip-view-wrapper {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flip-view-btn {
+  background: #e7d45a;              /* soft yellow */
+  color: #1b1b1b;
+  padding: 18px 46px;               /* BIGGER SIZE */
+  border-radius: 50px;              /* full pill */
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* soft shadow */
+  transition: all 0.25s ease;
+}
+
+.flip-view-btn:hover {
+  background: #d9c441;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* REMOVE UNDERLINE FROM ALL LINK BUTTONS */
+
+.achievements-btn,
+.view-more-btn,
+.flip-view-btn {
+  text-decoration: none !important;
+}
+/* ===== COMMON BUTTON STYLE FOR ALL VIEW / EXPLORE BUTTONS ===== */
+
+.achievements-btn,
+.view-more-btn,
+.flip-view-btn {
+  background: #e7d45a;
+  color: #1b1b1b;
+  padding: 18px 46px;      /* SAME SIZE */
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT SAME FOR ALL */
+.achievements-btn:hover,
+.view-more-btn:hover,
+.flip-view-btn:hover {
+  background: #d9c441;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+

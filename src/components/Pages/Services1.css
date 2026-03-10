@@ -1,0 +1,457 @@
+/* ✅ FIX HEADER NOT SHOWING / GOING BEHIND NAVBAR */
+.services1-page-header {
+  margin-top: 0px !important;
+  z-index: 1;
+}
+
+.services1-page-header-overlay {
+  z-index: 2;
+}
+
+.services1-page-header * {
+  position: relative;
+  z-index: 3;
+}
+
+/* ✅ IF NAVBAR IS FIXED THEN ADD SPACE */
+body {
+  overflow-x: hidden;
+}
+/* ✅ MAKE HEADER ALWAYS VISIBLE UNDER FIXED NAVBAR */
+.services1-page-header {
+  padding-top: 120px; /* ✅ adjust if needed */
+  box-sizing: border-box;
+}
+.achievements-section {
+  margin-top: 50px;
+}
+.services1-page-header {
+  min-height: 320px;
+  display: block !important;
+}
+
+/* ============================= */
+/* ✅ SERVICES HEADER (UNIQUE - NO CONFLICT WITH ABOUT) */
+/* ============================= */
+
+.services1-page-header {
+  width: 100%;
+  height: 420px; /* ✅ SAME AS ABOUT HEADER */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.services1-page-header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* ✅ SAME OVERLAY AS ABOUT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.page-title {
+  color: #fff;
+  font-size: 60px; /* ✅ SAME AS ABOUT HEADING */
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+/* ===== BREADCRUMB (FORCE SAME LIKE ABOUT) ===== */
+.breadcrumb {
+  list-style: none;
+  display: flex; /* ✅ makes it in one line */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* spacing between items */
+  flex-wrap: nowrap; /* ✅ no line break */
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  display: inline-flex; /* ✅ keeps text inline */
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.breadcrumb-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.breadcrumb-item.active {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* ✅ add slash like About */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: #ffffff;
+  padding: 0 8px;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-slide-down {
+  animation: slideDown 0.8s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ✅ RESPONSIVE HEADER (SAME AS ABOUT) */
+@media (max-width: 768px) {
+  .services1-page-header {
+    height: 260px;
+  }
+
+  .page-title {
+    font-size: 45px;
+  }
+}
+
+/* ============================= */
+/* ===== SERVICES CARDS SECTION ===== */
+/* ============================= */
+
+.services-section {
+  padding: 55px 60px;
+  background: #ffffff;
+}
+
+/* ✅ SERVICES HEADING (exact like reference image) */
+.services-heading {
+  text-align: center;
+  margin-bottom: 50px; /* ✅ UPDATED (more gap from cards) */
+}
+
+.services-mini-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.services-mini-title .text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #5a8f6a;
+  text-transform: uppercase;
+}
+
+.services-mini-title .line {
+  width: 55px;
+  height: 2px;
+  background: #5a8f6a;
+}
+
+.services-main-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1d2d2a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== UPDATED SERVICE CARDS ANIMATION (LIKE SERVICES.JSX) ===== */
+
+.services-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 380px;
+  background: #000;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  /* IMAGE CLARITY BOOST */
+  filter: brightness(1.05) contrast(1.1) saturate(1.15);
+}
+
+.services-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.28);
+}
+
+/* IMAGE FULL SIZE */
+.services-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: none;
+  box-shadow: none;
+}
+
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* SLIDE DARK OVERLAY */
+.services-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.15));
+  transition: bottom 0.45s ease;
+  z-index: 1;
+}
+
+.services-card:hover::before {
+  bottom: 0;
+}
+
+.services-card:hover .services-image img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.services-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px 24px;
+  z-index: 2;
+  transform: translateY(60%);
+  transition: transform 0.45s ease;
+}
+
+.services-card:hover .services-content {
+  transform: translateY(0%);
+}
+
+.services-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.services-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #f1f1f1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.services-card:hover .services-content p {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 20px;
+  }
+
+  .services-heading {
+    margin-bottom: 80px; /* ✅ MOBILE GAP */
+  }
+
+  .services-main-title {
+    font-size: 28px;
+  }
+}
+
+/* ============================= */
+/* ===== ACHIEVEMENTS SECTION ===== */
+/* ============================= */
+
+.achievements-section {
+  padding: 120px 40px;
+  background: #ffffff;
+}
+
+.achievements-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ EXACT HALF / HALF */
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.achievements-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievements-subtitle {
+  font-size: 14px;
+  color: #5a8f6a;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 12px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.achievements-subtitle::after {
+  content: "";
+  width: 45px;
+  height: 2px;
+  background: #5a8f6a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.achievements-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1d2d2a;
+}
+
+.achievements-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements-list li {
+  font-size: 15px;
+  margin-bottom: 14px;
+  padding-left: 30px;
+  position: relative;
+  color: #444;
+}
+
+.achievements-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #5a8f6a;
+  font-weight: bold;
+}
+
+/* RIGHT STATS GRID */
+.achievements-stats {
+  width: 100%; /* ✅ TAKE FULL 50% SPACE */
+  height: 520px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+}
+
+.stat-box h3 {
+  font-size: 56px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.stat-box p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* COLORS */
+.stat-box.green {
+  background: #5f8f4e;
+  color: #ffffff;
+}
+
+.stat-box.yellow {
+  background: #f0e36a;
+  color: #1d2d2a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .achievements-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .achievements-stats {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .achievements-content h2 {
+    font-size: 32px;
+  }
+}

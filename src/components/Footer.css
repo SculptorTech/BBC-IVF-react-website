@@ -1,0 +1,145 @@
+/* ===== FOOTER MAIN ===== */
+.footer {
+  background-color: #4b5b4b;
+  color: #ffffff;
+  padding: 70px 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ===== FOOTER COLUMN ===== */
+.footer-col h4 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ===== LEFT SIDE ICON + TEXT ===== */
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-icon {
+  color: #f2dd57;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+/* ===== TEXT LOOK (like image 1) ===== */
+.footer p {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e8e8e8;
+}
+
+/* ===== QUICK LINKS ===== */
+.footer-links p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 14px;
+  color: #e8e8e8;
+}
+
+.footer-links p:hover {
+  color: #f2dd57;
+}
+
+.link-icon {
+  color: #f2dd57;
+  font-size: 14px;
+}
+
+/* ===== SOCIAL ICONS (RIGHT SIDE) ===== */
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f2dd57;
+  color: #4b5b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-circle:hover {
+  transform: translateY(-3px);
+  background-color: #ffffff;
+  color: #4b5b4b;
+}
+
+/* ===== COPYRIGHT (Yellow bar) ===== */
+.copyright {
+  background-color: #f2dd57;
+  color: #4b5b4b;
+  text-align: center;
+  padding: 22px 15px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 60px 25px;
+    text-align: left;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-col h4 {
+    font-size: 24px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 14px;
+    padding: 18px 12px;
+  }
+}
+.footer-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.footer-link:hover {
+  color: #ffd700;
+}
+ 
+

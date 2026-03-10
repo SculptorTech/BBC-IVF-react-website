@@ -1,0 +1,610 @@
+/* ✅ HEADER BANNER */
+.products-page-header {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center 75%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page-header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-page-header-overlay h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-page-header-overlay p {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.about-page-header-overlay p span {
+  margin: 0 6px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .about-page-header {
+    height: 260px;
+  }
+
+  .about-page-header-overlay h2 {
+    font-size: 45px;
+  }
+
+  .about-page-header-overlay p {
+    font-size: 14px;
+  }
+}
+
+/* =======================================================
+   ✅ SECTION 1 : LAUNCHING SOON
+======================================================= */
+.launching-section {
+  padding: 55px 60px;
+  background: #fff;
+}
+
+.launching-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.launching-tag {
+  color: #2f7b35;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.launching-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #1b1b1b;
+}
+
+.launching-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.launch-card {
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.launch-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.launching-right {
+  text-align: left;
+}
+
+.launching-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.launching-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.launching-points li {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.launching-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2f7b35;
+  font-weight: 700;
+}
+
+.launching-mobile {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #1a1a1a;
+}
+
+.launching-address h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.launching-address p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 992px) {
+  .launching-container {
+    grid-template-columns: 1fr;
+  }
+
+  .launching-title {
+    font-size: 36px;
+  }
+
+  .launch-card {
+    width: 100%;
+  }
+
+  .launch-card img {
+    height: 240px;
+  }
+}
+
+/* =======================================================
+   ✅ SECTION 2 : SLIDER (8 IMAGES + POPUP ✅)
+======================================================= */
+.product-slider-section {
+  padding: 50px 60px 70px;
+  background: #fff;
+}
+
+.product-slider-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.product-slider-title h3 {
+  color: #2f7b35;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.product-slider-title .line {
+  width: 40px;
+  height: 2px;
+  background: #2f7b35;
+  opacity: 0.6;
+}
+
+.product-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.product-slider-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.slider-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ✅ clickable */
+.clickable-slide {
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.clickable-slide:hover {
+  transform: scale(1.02);
+}
+
+.slider-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-card p {
+  padding: 18px 18px;
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+  text-align: left;
+  background: #fff;
+  line-height: 1.4;
+}
+
+/* ✅ buttons */
+.slider-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  background: rgba(47, 123, 53, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+.slider-btn:hover {
+  transform: scale(1.08);
+}
+
+.slider-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ✅ responsive slider */
+@media (max-width: 1100px) {
+  .product-slider-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .product-slider-wrapper {
+    flex-direction: column;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+
+  .product-slider-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .slider-card img {
+    height: 240px;
+  }
+}
+
+/* =======================================================
+   ✅ MODAL POPUP (REFERENCE IMAGE STYLE ✅)
+======================================================= */
+.slider-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 30px;
+}
+
+.slider-modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 1050px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.slider-modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+.slider-modal-close {
+  position: absolute;
+  bottom: -25px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* =======================================================
+   ✅ SECTION 3 : PRODUCTS CARDS
+======================================================= */
+.products-section {
+  padding: 70px 40px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.products-top-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.products-top-title p {
+  margin: 0;
+  color: #2f7b35;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.products-line {
+  width: 42px;
+  height: 2px;
+  background: #2f7b35;
+  opacity: 0.7;
+}
+
+.products-row {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.product-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-content {
+  padding: 26px 22px 30px;
+  text-align: center;
+}
+
+.product-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  font-family: "Georgia", serif;
+}
+
+.product-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .products-row {
+    flex-direction: column;
+  }
+
+  .product-img {
+    height: 240px;
+  }
+}
+
+/* =======================================================
+   ✅ SECTION 4 : OUR ACHIEVEMENTS
+======================================================= */
+.achievements-section {
+  padding: 90px 60px;
+  background: #ffffff;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.achievements-label {
+  color: #2f7b35;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.achievements-title {
+  font-size: 62px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  line-height: 1.05;
+}
+
+.achievements-desc {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 650px;
+}
+
+.achievements-info h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2f7b35;
+  margin: 22px 0 12px;
+}
+
+.achievements-info ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.achievements-info ul li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.achievements-info ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2f7b35;
+  font-weight: 800;
+}
+
+.achievements-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ach-grid {
+  width: 640px;
+  max-width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ach-box {
+  padding: 55px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 290px;
+}
+
+.ach-box h2 {
+  font-size: 52px;
+  margin: 18px 0 10px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.ach-box p {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ach-box.green {
+  background: #5b8f55;
+  color: #ffffff;
+}
+
+.ach-box.yellow {
+  background: #f2e16a;
+  color: #1a1a1a;
+}
+
+.ach-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+}
+
+.ach-icon img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .achievements-container {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-title {
+    font-size: 42px;
+  }
+
+  .achievements-right {
+    justify-content: center;
+  }
+
+  .ach-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
